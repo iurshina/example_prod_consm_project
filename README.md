@@ -3,9 +3,9 @@ This is a prototype of a pipleline for processing of .tmx files.
 
 The project reads .tmx files and puts them into Kafka (into unprocessed_topic), then takes them from Kafka and does some basic cleaning, puts them into Kafka (into filtered_topic). Then the cleaned pairs are read from Kafka and saved to the disk locally.
 
-After that, the check of missalignment can be done. It relies on LASER model to do so. We have a LASER endpoint running (docker/laser_app), where we send sentence pairs to encode them, after than we perform a check based on cosine similarity. If the difference is below a chose threshold, we skip the pair.
+After that, the check of missalignment can be done. It relies on LASER model to do so. We have a LASER endpoint running (docker/laser_app), where we send sentence pairs to encode them, after that we perform a check based on cosine similarity. If the difference is below a chosen threshold, we skip the sentence pair.
 
-### How to use this code
+### How to run this code
 To start Kafka and LASER server, in the docker directory, run:
 
 > docker-compose up
