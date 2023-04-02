@@ -1,4 +1,4 @@
-#### What is this code
+### What is this code
 This is a prototype of a pipleline for processing of .tmx files. 
 
 The project reads .tmx files and puts them into Kafka (into unprocessed_topic), then takes them from Kafka and does some basic cleaning, puts them into Kafka (into filtered_topic). Then the cleaned pairs are read from Kafka and saved to the disk locally.
